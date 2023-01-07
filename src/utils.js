@@ -20,21 +20,7 @@ function humanizeTripEventTime(data) {
   return time ? dayjs(time).format(format) : '';
 }
 
-function isSomeAccepted(list) {
-  return list.some((item) => item.acceptance);
-}
-
-function getAcceptedItems(list) {
-  const acceptedItems = [];
-
-  list.forEach((item) => item.acceptance && acceptedItems.push(item));
-
-  return acceptedItems;
-}
-
 export {
   getRandomArrayElement,
   humanizeTripEventTime,
-  isSomeAccepted,
-  getAcceptedItems,
 };
