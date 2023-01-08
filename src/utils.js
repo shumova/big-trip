@@ -11,16 +11,23 @@ export const html = (strings, ...values) => strings.reduce((before, after, index
   return before + escape(String(value)) + after;
 });
 
-function getRandomArrayElement(items) {
-  return items[Math.floor(Math.random() * items.length)];
-}
+/**
+ * @param {string} value
+ */
+const formatDate = (value) => dayjs(value).format('MMM DD');
 
-function humanizeTripEventTime(data) {
-  const {time, format} = data;
-  return time ? dayjs(time).format(format) : '';
-}
+/**
+ * @param {string} value
+ */
+const formatTime = (value) => dayjs(value).format('HH:mm');
+
+/**
+ * @param {number} value
+ */
+const formatNumber = (value) => value.toLocaleString('en');
 
 export {
-  getRandomArrayElement,
-  humanizeTripEventTime,
+  formatDate,
+  formatTime,
+  formatNumber,
 };
