@@ -26,8 +26,15 @@ const formatTime = (value) => dayjs(value).format('HH:mm');
  */
 const formatNumber = (value) => value.toLocaleString('en');
 
+/**
+ * @param {Object} target
+ * @param {*} value
+ */
+const findKey = (target, value) => Object.keys(target).find((key) => target[key] === value);
+
 export {
   formatDate,
   formatTime,
   formatNumber,
+  findKey,
 };

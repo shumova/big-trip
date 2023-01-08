@@ -1,6 +1,6 @@
 const FilterType = {
   EVERYTHING: 'everything',
-  FUTURE: 'future'
+  FUTURE: 'future',
 };
 
 const SortType = {
@@ -8,7 +8,7 @@ const SortType = {
   EVENT: 'event',
   TIME: 'time',
   PRICE: 'price',
-  OFFERS: 'offers'
+  OFFERS: 'offers',
 };
 
 const PointType = {
@@ -20,7 +20,7 @@ const PointType = {
   FLIGHT: 'flight',
   CHECK_IN: 'check-in',
   SIGHTSEEING: 'sightseeing',
-  RESTAURANT: 'restaurant'
+  RESTAURANT: 'restaurant',
 };
 
 export {
