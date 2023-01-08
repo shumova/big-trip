@@ -331,6 +331,7 @@ main {
   list-style: none; }
 
 .trip-events__item {
+  display: block;
   margin-bottom: 54px;
   margin-left: auto; }
 
@@ -746,6 +747,7 @@ main {
   line-height: 27px; }
 
 .event__section:not(:last-child) {
+  display: block;
   margin-bottom: 28px; }
 
 .event__section--offers {

@@ -11,7 +11,7 @@ export default class ListItemView extends View {
    */
   createHtml() {
     return html`
-      <li class="trip-events__item"></li>
+      <li></li>
     `;
   }
 }

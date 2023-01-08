@@ -11,30 +11,23 @@ export const html = (strings, ...values) => strings.reduce((before, after, index
   return before + escape(String(value)) + after;
 });
 
-function getRandomArrayElement(items) {
-  return items[Math.floor(Math.random() * items.length)];
-}
+/**
+ * @param {string} value
+ */
+const formatDate = (value) => dayjs(value).format('MMM DD');
 
-function humanizeTripEventTime(data) {
-  const {time, format} = data;
-  return time ? dayjs(time).format(format) : '';
-}
+/**
+ * @param {string} value
+ */
+const formatTime = (value) => dayjs(value).format('HH:mm');
 
-function isSomeAccepted(list) {
-  return list.some((item) => item.acceptance);
-}
-
-function getAcceptedItems(list) {
-  const acceptedItems = [];
-
-  list.forEach((item) => item.acceptance && acceptedItems.push(item));
-
-  return acceptedItems;
-}
+/**
+ * @param {number} value
+ */
+const formatNumber = (value) => value.toLocaleString('en');
 
 export {
-  getRandomArrayElement,
-  humanizeTripEventTime,
-  isSomeAccepted,
-  getAcceptedItems,
+  formatDate,
+  formatTime,
+  formatNumber,
 };
