@@ -1,8 +1,7 @@
-import './views/filter-view';
-import './views/sort-view';
-import './views/list-view';
+import FilterView from './views/filter-view';
+import SortView from './views/sort-view';
 import ListView from './views/list-view';
-import './views/new-point-editor-view';
+import NewPointEditorView from './views/new-point-editor-view';
 
 import Store from './store';
 
@@ -15,7 +14,11 @@ import OfferGroupAdapter from './adapters/offer-group-adapter';
 import {FilterType, SortType} from './enums';
 import {filterCallbackMap, sortCallbackMap} from './maps';
 
+import FilterPresenter from './presenters/filter-presenter';
+import SortPresenter from './presenters/sort-presenter';
 import ListPresenter from './presenters/list-presenter';
+import NewPointButtonPresenter from './presenters/new-point-button-presenter';
+import NewPointEditorPresenter from './presenters/new-point-editor-presenter';
 
 const BASE = 'https://19.ecmascript.pages.academy/big-trip-simple';
 const AUTH = 'Basic MashaLovesJs';
@@ -58,14 +61,21 @@ const models = [
   offerGroupsModel,
 ];
 
+const newPointButtonView = document.querySelector('.trip-main__event-add-btn');
+const filterView = document.querySelector(String(FilterView));
+const sortView = document.querySelector(String(SortView));
 const listView = document.querySelector(String(ListView));
-
+const newPointEditorView = new NewPointEditorView(listView);
 
 Promise.all(
   models.map((model) => model.ready())
 )
   .then(async () => {
+    new NewPointButtonPresenter(newPointButtonView, models);
+    new FilterPresenter(filterView, models);
+    new SortPresenter(sortView, models);
     new ListPresenter(listView, models);
+    new NewPointEditorPresenter(newPointEditorView, models);
   })
 
   .catch((error) => {
