@@ -78,6 +78,5 @@ Promise.all(
     new NewPointEditorPresenter(newPointEditorView, models);
   })
 
-  .catch((error) => {
-    console.log(error);
+  .catch(() => {
   });
