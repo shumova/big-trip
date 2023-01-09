@@ -18,7 +18,7 @@ const sortTitleMap = {
   [SortType.EVENT]: 'Event',
   [SortType.TIME]: 'Time',
   [SortType.PRICE]: 'Price',
-  [SortType.OFFERS]: 'Offers'
+  [SortType.OFFERS]: 'Offers',
 };
 
 const sortDisabilityMap = {
@@ -26,7 +26,7 @@ const sortDisabilityMap = {
   [SortType.EVENT]: true,
   [SortType.TIME]: true,
   [SortType.PRICE]: false,
-  [SortType.OFFERS]: true
+  [SortType.OFFERS]: true,
 };
 
 /**

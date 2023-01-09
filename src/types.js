@@ -92,6 +92,7 @@
 
 /**
  * @typedef {import('./views/filter-view').default} FilterView
+ * @typedef {import('./views/sort-view').default} SortView
  * @typedef {import('./views/list-view').default} ListView
  */
 
