@@ -45,7 +45,7 @@ export default class CollectionModel extends Model {
     this.#filter = filter;
 
     if (notify) {
-      this.dispatchEvent(new CustomEvent('filter', ));
+      this.dispatchEvent(new CustomEvent('filter'));
     }
   }
 
@@ -60,7 +60,7 @@ export default class CollectionModel extends Model {
     this.#sort = sort;
 
     if (notify) {
-      this.dispatchEvent(new CustomEvent('sort', ));
+      this.dispatchEvent(new CustomEvent('sort'));
     }
   }
 
