@@ -10,6 +10,8 @@ export default class ListPresenter extends Presenter {
     super(...arguments);
 
     this.updateView();
+
+    this.view.addEventListener('edit', this.handleViewEdit.bind(this));
     this.pointsModel.addEventListener('filter', this.handlePointModelFilter.bind(this));
     this.pointsModel.addEventListener('sort', this.handlePointModelSort.bind(this));
     this.pointsModel.addEventListener('add', this.handlePointModelAdd.bind(this));
@@ -39,6 +41,7 @@ export default class ListPresenter extends Presenter {
       }));
 
     return {
+      id: point.id,
       date: formatDate(point.startDate),
       icon: pointIconMap[point.type],
       title: `${pointTitleMap[point.type]} ${destination.name}`,
@@ -49,6 +52,14 @@ export default class ListPresenter extends Presenter {
       basePrice: formatNumber(point.basePrice),
       offers: OfferViewStates,
     };
+  }
+
+  /**
+   * @param {CustomEvent & {target: PointView}} event
+   */
+  handleViewEdit(event) {
+    this.navigate('/edit', event.target.dataset);
+
   }
 
   handlePointModelFilter() {

@@ -2,6 +2,7 @@ import FilterView from './views/filter-view';
 import SortView from './views/sort-view';
 import ListView from './views/list-view';
 import NewPointEditorView from './views/new-point-editor-view';
+import PointEditorView from './views/point-editor-view';
 
 import Store from './store';
 
@@ -19,6 +20,7 @@ import SortPresenter from './presenters/sort-presenter';
 import ListPresenter from './presenters/list-presenter';
 import NewPointButtonPresenter from './presenters/new-point-button-presenter';
 import NewPointEditorPresenter from './presenters/new-point-editor-presenter';
+import PointEditorPresenter from './presenters/point-editor-presenter';
 
 const BASE = 'https://19.ecmascript.pages.academy/big-trip-simple';
 const AUTH = 'Basic MashaLovesJs!';
@@ -66,6 +68,7 @@ const filterView = document.querySelector(String(FilterView));
 const sortView = document.querySelector(String(SortView));
 const listView = document.querySelector(String(ListView));
 const newPointEditorView = new NewPointEditorView(listView);
+const pointEditorView = new PointEditorView(listView);
 
 Promise.all(
   models.map((model) => model.ready())
@@ -76,6 +79,7 @@ Promise.all(
     new SortPresenter(sortView, models);
     new ListPresenter(listView, models);
     new NewPointEditorPresenter(newPointEditorView, models);
+    new PointEditorPresenter(pointEditorView, models);
   })
 
   .catch(() => {
