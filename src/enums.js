@@ -23,8 +23,14 @@ const PointType = {
   RESTAURANT: 'restaurant',
 };
 
+const ButtonState = {
+  DEFAULT: 0,
+  PRESSED: 1,
+};
+
 export {
   FilterType,
   SortType,
   PointType,
+  ButtonState,
 };

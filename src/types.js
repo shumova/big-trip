@@ -98,6 +98,11 @@
  */
 
 /**
+ * @typedef {import('flatpickr/dist/types/instance').Instance} Calendar
+ * @typedef {import('flatpickr/dist/types/options').Options} CalendarConfig
+ */
+
+/**
  * @typedef OfferViewState
  * @prop {string} title
  * @prop {string} price
