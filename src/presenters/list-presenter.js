@@ -12,9 +12,12 @@ export default class ListPresenter extends Presenter {
     this.updateView();
 
     this.view.addEventListener('edit', this.handleViewEdit.bind(this));
+
     this.pointsModel.addEventListener('filter', this.handlePointModelFilter.bind(this));
     this.pointsModel.addEventListener('sort', this.handlePointModelSort.bind(this));
     this.pointsModel.addEventListener('add', this.handlePointModelAdd.bind(this));
+    this.pointsModel.addEventListener('update', this.handlePointModelUpdate.bind(this));
+    this.pointsModel.addEventListener('delete', this.handlePointModelDelete.bind(this));
   }
 
   updateView() {
@@ -59,7 +62,6 @@ export default class ListPresenter extends Presenter {
    */
   handleViewEdit(event) {
     this.navigate('/edit', event.target.dataset);
-
   }
 
   handlePointModelFilter() {
@@ -71,6 +73,14 @@ export default class ListPresenter extends Presenter {
   }
 
   handlePointModelAdd() {
+    this.updateView();
+  }
+
+  handlePointModelUpdate() {
+    this.updateView();
+  }
+
+  handlePointModelDelete() {
     this.updateView();
   }
 }

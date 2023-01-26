@@ -2,6 +2,12 @@ import View from './view';
 import PointView from './point-view';
 
 export default class ListView extends View {
+  constructor() {
+    super();
+
+    this.setAttribute('role', 'list');
+  }
+
   /**
    * @param {PointViewState[]} states
    */
@@ -15,7 +21,7 @@ export default class ListView extends View {
    * @param {string} id
    */
   findById(id) {
-    return this.querySelector(`[data-id="${id}"]`);
+    return this.querySelector(`${PointView}[data-id="${id}"]`);
   }
 }
 

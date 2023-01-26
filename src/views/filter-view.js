@@ -6,6 +6,7 @@ export default class FilterView extends RadioGroupView {
     super();
 
     this.classList.add('trip-filters');
+
   }
 
   /**
