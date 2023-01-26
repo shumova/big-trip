@@ -16,6 +16,9 @@ export default class NewPointEditorView extends View {
   constructor(listView) {
     super();
 
+    this.classList.add('trip-events__item');
+    this.setAttribute('role', 'listitem');
+
     /**
      * @type {ListView}
      */
@@ -115,6 +118,13 @@ export default class NewPointEditorView extends View {
 
     this.querySelector('.event__save-btn').textContent = text;
     this.uiBlockerView.toggle(flag);
+  }
+
+  /**
+   * @param {string} name
+   */
+  findByName(name) {
+    return this.querySelector('form').elements[name];
   }
 }
 
