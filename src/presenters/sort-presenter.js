@@ -1,5 +1,5 @@
 import {SortType} from '../enums';
-import {filterCallbackMap, sortCallbackMap, sortDisabilityMap, sortTitleMap} from '../maps';
+import {sortCallbackMap, sortDisabilityMap, sortTitleMap} from '../maps';
 import {findKey} from '../utils';
 import Presenter from './presenter';
 
