@@ -8,6 +8,7 @@ import OffersView from './common/offers-view';
 import DestinationDetailsView from './common/destination-details-view';
 import {saveButtonTextMap} from '../maps';
 import UiBlockerView from './ui-blocker-view';
+import './point-view.css';
 
 /**
  * @implements {EventListenerObject}

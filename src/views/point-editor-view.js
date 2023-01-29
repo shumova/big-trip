@@ -1,6 +1,7 @@
 import NewPointEditorView from './new-point-editor-view';
 import {deleteButtonTextMap} from '../maps';
 import {html} from '../utils';
+import './point-view.css';
 
 export default class PointEditorView extends NewPointEditorView {
   constructor() {
