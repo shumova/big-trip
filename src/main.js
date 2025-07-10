@@ -23,7 +23,7 @@ import NewPointButtonPresenter from './presenters/new-point-button-presenter';
 import NewPointEditorPresenter from './presenters/new-point-editor-presenter';
 import PointEditorPresenter from './presenters/point-editor-presenter';
 
-const BASE = 'https://19.ecmascript.pages.academy/big-trip-simple';
+const BASE = 'https://24.objects.htmlacademy.pro/big-trip';
 const AUTH = 'Basic MashaLovesJs!!!';
 
 /**
